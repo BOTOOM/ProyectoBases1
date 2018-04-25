@@ -1,0 +1,19 @@
+-identificar actores:
+
+personas o entes que interactuan con el sitema.
+
+
+
+-identificar los requisitos funcionales(casos de uso):
+
+
+
+-identificar requisitos no funcionales.
+
+
+
+realiacion:
+
+	portada:
+		nombre del proyecto
+		version

@@ -7,24 +7,31 @@
 \usepackage[hidelinks]{hyperref}
 \usepackage{float}
 \usepackage{multirow}
+\usepackage{tocloft}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\title{gestion partidos mundial}
-\author{ Edwar Diaz Ruiz 20141020004}
+\title{GESTIÓN DE LA COPA MUNDIAL RUSIA 2018}
+\author{ Edwar Diaz Ruiz 20141020004 \\\\\\ Version: 1.0}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \raggedbottom
 \begin{document}
-	
-	
-	
+
 \maketitle
 \tableofcontents
+\clearpage
+\addcontentsline{toc}{chapter}{Lista de figuras} % para que aparezca en el indice de contenidos
+\listoffigures % indice de figuras
+\clearpage
+\addcontentsline{toc}{chapter}{Lista de tablas} % para que aparezca en el indice de contenidos
+\listoftables % indice de tablas
+
 \part{CONTEXTO}
 %\include{proyecto/problema}
+\include{Contexto/Introduccion}
 \include{Contexto/Objetivos}
 \include{Contexto/Actores}
 \include{Contexto/Requisitos}

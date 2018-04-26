@@ -1,12 +1,14 @@
 This is BibTeX, Version 0.99dThe top-level auxiliary file: informe.aux
-A level-1 auxiliary file: proyecto/problema.aux
-A level-1 auxiliary file: proyecto/metodologia.aux
-A level-1 auxiliary file: uml/analisis.aux
-A level-1 auxiliary file: uml/diseno.aux
-A level-1 auxiliary file: uml/patrones.aux
-A level-1 auxiliary file: conclusiones/anexos.aux
+A level-1 auxiliary file: Contexto/Introduccion.aux
+A level-1 auxiliary file: Contexto/Objetivos.aux
+A level-1 auxiliary file: Contexto/Actores.aux
+A level-1 auxiliary file: Contexto/Requisitos.aux
 The style file: plain.bst
+I couldn't open database file articulos.bib
+---line 35 of file informe.aux
+ : \bibdata{articulos
+ :                   ,libros}
+I'm skipping whatever remains of this command
 I found no \citation commands---while reading file informe.aux
-Database file #1: articulos.bib
-Database file #2: libros.bib
-(There was 1 error message)
+I found no database files---while reading file informe.aux
+(There were 3 error messages)

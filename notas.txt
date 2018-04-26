@@ -17,3 +17,15 @@ realiacion:
 	portada:
 		nombre del proyecto
 		version
+
+
+
+
+objetivos:
+	-mostrar avance de los equipos atravez de la copa.
+	-gestionar los partidos realizados.
+	-mostrar datos y estadisticas de los jugadores.
+	-mostrar datos y estadisticas de los equipos.
+	-mostrar datos y estadisticas de los partidos.
+
+

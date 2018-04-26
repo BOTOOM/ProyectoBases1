@@ -8,7 +8,25 @@
 \usepackage{float}
 \usepackage{multirow}
 \usepackage{tocloft}
+\usepackage[table]{xcolor}
+\usepackage{color}
+\usepackage{colortbl}
+\usepackage{multicol}
+\usepackage{multirow}
+\usepackage{booktabs}
+\usepackage{tabularx}
+%---- Paquete para aliniación de texto verticalmente dentro de tablas
+\usepackage{array}
+%---- Paquetes para los pies de las tablas
+\usepackage{caption}
+\usepackage{subcaption}
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \title{GESTIÓN DE LA COPA MUNDIAL RUSIA 2018}
@@ -33,10 +51,15 @@
 %\include{proyecto/problema}
 \include{Contexto/Introduccion}
 \include{Contexto/Objetivos}
-\include{Contexto/Actores}
-\include{Contexto/Requisitos}
+\part{DISEÑO}
 
-\bibliographystyle{plain}
-\bibliography{articulos,libros}
+\include{Designe/Requisito}
+\include{Designe/RequisitoF}
+\include{Designe/RequisitoNF}
+%\include{Contexto/Actores}
+%\include{Contexto/Requisitos}
+
+%\bibliographystyle{plain}
+%\bibliography{articulos,libros}
 
 \end{document}

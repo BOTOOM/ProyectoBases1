@@ -4,8 +4,11 @@
 \BOOKMARK [0][-]{chapter.1}{INTRODUCCI\323N}{part.1}% 4
 \BOOKMARK [0][-]{chapter.2}{OBJETIVOS DEL SISTEMA}{part.1}% 5
 \BOOKMARK [1][-]{section.2.1}{OBJETIVOS}{chapter.2}% 6
-\BOOKMARK [1][-]{section.2.2}{Definici\363n de Actores}{chapter.2}% 7
-\BOOKMARK [1][-]{section.2.3}{REQUISITOS}{chapter.2}% 8
-\BOOKMARK [2][-]{subsection.2.3.1}{Requisitos de Informaci\363n}{section.2.3}% 9
-\BOOKMARK [2][-]{subsection.2.3.2}{Requisitos funcionales}{section.2.3}% 10
-\BOOKMARK [2][-]{subsection.2.3.3}{Requisitos no funcionales}{section.2.3}% 11
+\BOOKMARK [-1][-]{part.2}{II DISE\321O}{}% 7
+\BOOKMARK [0][-]{chapter.3}{REQUISITOS DEL SISTEMA}{part.2}% 8
+\BOOKMARK [1][-]{section.3.1}{Requisitos de almacenamiento de informaci\363n}{chapter.3}% 9
+\BOOKMARK [1][-]{section.3.2}{Requisitos funcionales}{chapter.3}% 10
+\BOOKMARK [2][-]{subsection.3.2.1}{Diagramas de casos de uso}{section.3.2}% 11
+\BOOKMARK [2][-]{subsection.3.2.2}{Definici\363n de actores}{section.3.2}% 12
+\BOOKMARK [2][-]{subsection.3.2.3}{Casos de uso del sistema}{section.3.2}% 13
+\BOOKMARK [1][-]{section.3.3}{Requisitos no funcionales}{chapter.3}% 14

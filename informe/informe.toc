@@ -11,5 +11,5 @@
 \contentsline {section}{\numberline {3.2}Requisitos funcionales}{22}{section.3.2}
 \contentsline {subsection}{\numberline {3.2.1}Diagramas de casos de uso}{22}{subsection.3.2.1}
 \contentsline {subsection}{\numberline {3.2.2}Definici\IeC {\'o}n de actores}{24}{subsection.3.2.2}
-\contentsline {subsection}{\numberline {3.2.3}Casos de uso del sistema}{24}{subsection.3.2.3}
-\contentsline {section}{\numberline {3.3}Modelo Relacional}{28}{section.3.3}
+\contentsline {subsection}{\numberline {3.2.3}Casos de uso del sistema}{25}{subsection.3.2.3}
+\contentsline {section}{\numberline {3.3}Modelo Relacional}{29}{section.3.3}

@@ -1,6 +1,6 @@
 /*==============================================================*/
 /* DBMS name:      ORACLE Version 10gR2                         */
-/* Created on:     29/05/2018 5:15:33 p. m.                     */
+/* Created on:     04/06/2018 12:16:18 a. m.                    */
 /*==============================================================*/
 
 
@@ -29,7 +29,7 @@ alter table EQUIPO
    drop constraint FK_EQUIPO_DELEGACIO_LUGAR;
 
 alter table EQUIPO
-   drop constraint FK_EQUIPO_GRUPO2_GRUPO;
+   drop constraint FK_EQUIPO_GRUPO_GRUPO;
 
 alter table EQUIPO
    drop constraint FK_EQUIPO_SEDE_LUGAR;
@@ -59,6 +59,9 @@ alter table EVENTOARBITRO
    drop constraint FK_EVENTOAR_RELATIONS_ENCUENTR;
 
 alter table EVENTOS
+   drop constraint FK_EVENTOS_PERSO_EVE_PERSONAJ;
+
+alter table EVENTOS
    drop constraint FK_EVENTOS_RELATIONS_POSCICIO;
 
 alter table EVENTOS
@@ -66,9 +69,6 @@ alter table EVENTOS
 
 alter table EVENTOS
    drop constraint FK_EVENTOS_RELATIONS_ENCUENTR;
-
-alter table GRUPO
-   drop constraint FK_GRUPO_GRUPO_EQUIPO;
 
 alter table LUGAR
    drop constraint FK_LUGAR_ESTA_EN_LUGAR;
@@ -132,8 +132,6 @@ drop index RELATIONSHIP_28_FK;
 
 drop table ENCUENTROARBITRO cascade constraints;
 
-drop index GRUPO2_FK;
-
 drop index DELEGACION_FK;
 
 drop index SEDE_FK;
@@ -161,6 +159,8 @@ drop index RELATIONSHIP_29_FK;
 drop index RELATIONSHIP_25_FK;
 
 drop table EVENTOARBITRO cascade constraints;
+
+drop index PERSO_EVENTO_FK;
 
 drop index RELATIONSHIP_24_FK;
 
@@ -349,13 +349,6 @@ create index DELEGACION_FK on EQUIPO (
 );
 
 /*==============================================================*/
-/* Index: GRUPO2_FK                                             */
-/*==============================================================*/
-create index GRUPO2_FK on EQUIPO (
-   ID_GRUPO ASC
-);
-
-/*==============================================================*/
 /* Table: ESTADISTICAAR                                         */
 /*==============================================================*/
 create table ESTADISTICAAR  (
@@ -478,6 +471,13 @@ create index RELATIONSHIP_24_FK on EVENTOS (
 );
 
 /*==============================================================*/
+/* Index: PERSO_EVENTO_FK                                       */
+/*==============================================================*/
+create index PERSO_EVENTO_FK on EVENTOS (
+   ID_PERSONA ASC
+);
+
+/*==============================================================*/
 /* Table: FASE                                                  */
 /*==============================================================*/
 create table FASE  (
@@ -492,9 +492,6 @@ create table FASE  (
 create table GRUPO  (
    ID_GRUPO             VARCHAR2(2)                     not null,
    NOMBRE_GRUPO         VARCHAR2(30),
-   ID_LUGAR             VARCHAR2(3),
-   EQU_ID_GRUPO         VARCHAR2(2),
-   ID_EQUIPO            VARCHAR2(3),
    constraint PK_GRUPO primary key (ID_GRUPO)
 );
 
@@ -502,9 +499,7 @@ create table GRUPO  (
 /* Index: GRUPO_FK                                              */
 /*==============================================================*/
 create index GRUPO_FK on GRUPO (
-   ID_LUGAR ASC,
-   EQU_ID_GRUPO ASC,
-   ID_EQUIPO ASC
+   ID_GRUPO ASC
 );
 
 /*==============================================================*/
@@ -781,7 +776,7 @@ alter table EQUIPO
       references LUGAR (ID_LUGAR);
 
 alter table EQUIPO
-   add constraint FK_EQUIPO_GRUPO2_GRUPO foreign key (ID_GRUPO)
+   add constraint FK_EQUIPO_GRUPO_GRUPO foreign key (ID_GRUPO)
       references GRUPO (ID_GRUPO);
 
 alter table EQUIPO
@@ -821,6 +816,10 @@ alter table EVENTOARBITRO
       references ENCUENTROARBITRO (ID_ECUENTA);
 
 alter table EVENTOS
+   add constraint FK_EVENTOS_PERSO_EVE_PERSONAJ foreign key (ID_PERSONA)
+      references PERSONAJE (ID_PERSONA);
+
+alter table EVENTOS
    add constraint FK_EVENTOS_RELATIONS_POSCICIO foreign key (ID_POS)
       references POSCICION (ID_POS);
 
@@ -831,10 +830,6 @@ alter table EVENTOS
 alter table EVENTOS
    add constraint FK_EVENTOS_RELATIONS_ENCUENTR foreign key (NUMPARTIDO, ID_ENCUENTRO)
       references ENCUENTRO (NUMPARTIDO, ID_ENCUENTRO);
-
-alter table GRUPO
-   add constraint FK_GRUPO_GRUPO_EQUIPO foreign key (ID_LUGAR, EQU_ID_GRUPO, ID_EQUIPO)
-      references EQUIPO (ID_LUGAR, ID_GRUPO, ID_EQUIPO);
 
 alter table LUGAR
    add constraint FK_LUGAR_ESTA_EN_LUGAR foreign key (LUG_ID_LUGAR)
